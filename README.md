@@ -177,6 +177,7 @@ An object representing default options to be used when setting and expiring cook
 |  *domain* | A string value of the domain of the cookie                                                       | `undefined` |
 | *expires* | A number (of seconds), a date parsable string, or a `Date` object of when the cookie will expire | `undefined` |
 |  *secure* | A boolean value of whether or not the cookie should only be available over SSL                   | `false`     |
+|  *sameSite* | A string value of 'None', 'Strict' or 'Lax'                                                    | `undefined` |
 
 **Example Usage**
 ```javascript

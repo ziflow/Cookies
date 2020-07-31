@@ -23,7 +23,7 @@
         // Used to ensure cookie keys do not collide with
         // built-in `Object` properties
         Cookies._cacheKeyPrefix = 'cookey.'; // Hurr hurr, :)
-        
+
         Cookies._maxExpireDate = new Date('Fri, 31 Dec 9999 23:59:59 UTC');
 
         Cookies.defaults = {
@@ -35,7 +35,7 @@
             if (Cookies._cachedDocumentCookie !== Cookies._document.cookie) {
                 Cookies._renewCache();
             }
-            
+
             var value = Cookies._cache[Cookies._cacheKeyPrefix + key];
 
             return value === undefined ? undefined : decodeURIComponent(value);
@@ -59,7 +59,8 @@
                 path: options && options.path || Cookies.defaults.path,
                 domain: options && options.domain || Cookies.defaults.domain,
                 expires: options && options.expires || Cookies.defaults.expires,
-                secure: options && options.secure !== undefined ?  options.secure : Cookies.defaults.secure
+                secure: options && options.secure !== undefined ?  options.secure : Cookies.defaults.secure,
+                sameSite: options && options.sameSite !== undefined ?  options.sameSite : Cookies.defaults.sameSite
             };
         };
 
@@ -95,6 +96,7 @@
             cookieString += options.domain ? ';domain=' + options.domain : '';
             cookieString += options.expires ? ';expires=' + options.expires.toUTCString() : '';
             cookieString += options.secure ? ';secure' : '';
+            cookieString += options.sameSite ? ';sameSite=' + options.sameSite : '';
 
             return cookieString;
         };
@@ -130,7 +132,7 @@
                     console.error('Could not decode cookie with key "' + key + '"', e);
                 }
             }
-            
+
             return {
                 key: decodedKey,
                 value: cookieString.substr(separatorIndex + 1) // Defer decoding value until accessed
@@ -158,7 +160,7 @@
     // AMD support
     if (typeof define === 'function' && define.amd) {
         define(function () { return cookiesExport; });
-    // CommonJS/Node.js support
+        // CommonJS/Node.js support
     } else if (typeof exports === 'object') {
         // Support Node.js specific `module.exports` (which can be a function)
         if (typeof module === 'object' && typeof module.exports === 'object') {

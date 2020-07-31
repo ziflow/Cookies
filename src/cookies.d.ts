@@ -9,6 +9,7 @@ interface CookieOptions {
     domain?: string;
     expires?: any;
     secure?: boolean;
+    sameSite: string;
 }
 
 interface CookiesStatic {
@@ -24,10 +25,6 @@ interface CookiesStatic {
 
 declare var Cookies:CookiesStatic;
 
-declare module "cookies" {
-    export = Cookies;
-}
-
-declare module "cookies-js" {
+declare module "@ziflow/cookies" {
     export = Cookies;
 }

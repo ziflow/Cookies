@@ -1,15 +1,16 @@
 {
-    "name"          : "cookies-js",
-    "version"       : "1.2.4-pre",
-    "author"        : "Scott Hamper",
+    "name"          : "@ziflow/cookies",
+    "version"       : "1.2.6",
+    "author"        : "Scott Hamper & Pawel Czekaj",
     "description"   : "Client-Side Cookie Manipulation API",
-    "homepage"      : "http://github.com/ScottHamper/Cookies",
+    "homepage"      : "http://github.com/ziflow/Cookies",
     "license"       : "Public Domain",
     "keywords"      : ["cookies", "client", "browser"],
+    "typings"       : "./src/cookies.d.ts",
     "repository"    : {
         "type": "git",
-        "url": "git://github.com/ScottHamper/Cookies.git"
+        "url": "git://github.com/ziflow/Cookies.git"
     },
-    "main"          : "./dist/cookies.js",
-    "files"         : ["dist/*", "README.md", "UNLICENSE"]
+    "main"          : "./src/cookies.js",
+    "files"         : ["src/*", "README.md", "UNLICENSE"]
 }
