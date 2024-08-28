@@ -26,7 +26,7 @@
 
         Cookies._maxExpireDate = new Date('Fri, 31 Dec 9999 23:59:59 UTC');
 
-        Cookies.defaults = {
+        Cookies.defaultOptions = {
             path: '/',
             secure: false
         };
@@ -56,11 +56,11 @@
 
         Cookies._getExtendedOptions = function (options) {
             return {
-                path: options && options.path || Cookies.defaults.path,
-                domain: options && options.domain || Cookies.defaults.domain,
-                expires: options && options.expires || Cookies.defaults.expires,
-                secure: options && options.secure !== undefined ?  options.secure : Cookies.defaults.secure,
-                sameSite: options && options.sameSite !== undefined ?  options.sameSite : Cookies.defaults.sameSite
+                path: options && options.path || Cookies.defaultOptions.path,
+                domain: options && options.domain || Cookies.defaultOptions.domain,
+                expires: options && options.expires || Cookies.defaultOptions.expires,
+                secure: options && options.secure !== undefined ?  options.secure : Cookies.defaultOptions.secure,
+                sameSite: options && options.sameSite !== undefined ?  options.sameSite : Cookies.defaultOptions.sameSite
             };
         };
 

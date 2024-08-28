@@ -19,7 +19,7 @@ interface CookiesStatic {
     set(key:string, value:any, options?:CookieOptions): CookiesStatic;
     expire(key:string, options?:CookieOptions): CookiesStatic;
 
-    defaults: CookieOptions;
+    defaultOptions: CookieOptions;
     enabled: boolean;
 }
 
