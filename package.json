@@ -1,5 +1,5 @@
 {
-    "name"          : "@ziflow/cookies",
+    "name"          : "@ziflow-commons/cookies",
     "version"       : "1.2.7",
     "author"        : "Scott Hamper & Pawel Czekaj",
     "description"   : "Client-Side Cookie Manipulation API",

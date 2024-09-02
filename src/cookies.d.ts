@@ -25,6 +25,6 @@ interface CookiesStatic {
 
 declare var Cookies:CookiesStatic;
 
-declare module "@ziflow/cookies" {
+declare module "@ziflow-commons/cookies" {
     export = Cookies;
 }
