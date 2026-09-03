@@ -1,6 +1,7 @@
 {
     "name"          : "@ziflow-commons/cookies",
     "version"       : "1.2.7",
+    "publishConfig" : { "registry": "https://npm.apkg.io/ziflow/" },
     "author"        : "Scott Hamper & Pawel Czekaj",
     "description"   : "Client-Side Cookie Manipulation API",
     "homepage"      : "http://github.com/ziflow/Cookies",
